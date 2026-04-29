@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://yuep1fvvonid"]
+
+[ext_resource type="Texture2D" uid="uid://dmd7s65o1oi4v" path="res://assets/Logo_comb.png" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://dy65p2ypnuo8e" path="res://assets/fontes/Jersey_10/Jersey10-Regular.ttf" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://dfajkbwlrt3va" path="res://assets/botao_v1.png" id="3_mhnvy"]
+
+[node name="Menu" type="Control" unique_id=346145450]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(21, 19)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=284160125]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5370987, 0.4340616, 0.38206664, 1)
+
+[node name="logo" type="Control" parent="." unique_id=907206536]
+z_index = 1
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LogoComb" type="Sprite2D" parent="logo" unique_id=1100888248]
+position = Vector2(-2, 0)
+texture = ExtResource("1_yqeox")
+offset = Vector2(504, 123)
+
+[node name="botoes" type="VBoxContainer" parent="." unique_id=1203161305]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -440.0
+offset_top = -391.0
+offset_right = -127.0
+offset_bottom = -83.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Jogar" type="Button" parent="botoes" unique_id=1727739731]
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.10748, 0.107479624, 0.107479714, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.52383417, 0, 0.08291609, 1)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+text = "Jogar"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="botoes/Jogar" unique_id=197682273]
+z_index = -1
+position = Vector2(165, 39)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_mhnvy")
+
+[node name="Baralhos" type="Button" parent="botoes" unique_id=439716023]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.5254902, 0, 0.08235294, 1)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+text = "Baralhos"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="botoes/Baralhos" unique_id=1487949763]
+z_index = -1
+position = Vector2(165, 39)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_mhnvy")
+
+[node name="Configuracoes" type="Button" parent="botoes" unique_id=1326128650]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.5254902, 0, 0.08235294, 1)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+text = "Configurações"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="botoes/Configuracoes" unique_id=1457571092]
+z_index = -1
+position = Vector2(165, 39)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_mhnvy")
+
+[node name="Sair" type="Button" parent="botoes" unique_id=1075341290]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.5254902, 0, 0.08235294, 1)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+text = "Sair"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="botoes/Sair" unique_id=813850227]
+z_index = -1
+position = Vector2(165, 39)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_mhnvy")

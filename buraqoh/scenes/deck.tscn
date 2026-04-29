@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cydgl0pra33as"]
+
+[ext_resource type="Script" uid="uid://d3gs2ex3xnu1x" path="res://scripts/deck.gd" id="1_sdhao"]
+[ext_resource type="PackedScene" uid="uid://3trgkf0u68ry" path="res://example/card/card.tscn" id="2_6rnap"]
+
+[node name="Deck" type="Node2D" unique_id=1561270292]
+script = ExtResource("1_sdhao")
+card_scene = ExtResource("2_6rnap")

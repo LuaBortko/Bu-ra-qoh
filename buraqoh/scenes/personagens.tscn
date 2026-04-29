@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://mjhjr2y2wk0i"]
+
+[ext_resource type="Texture2D" uid="uid://bvb52bwatsd8n" path="res://assets/antigosSprites/fatima.png" id="1_v4bip"]
+[ext_resource type="Texture2D" uid="uid://ctd3fxxqnkonk" path="res://assets/antigosSprites/sueli.png" id="2_x70fr"]
+
+[node name="Personagens" type="Control" unique_id=616912128]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1997990269]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5370987, 0.4340616, 0.38206664, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1104564830]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8967014
+anchor_top = 0.0030864198
+anchor_right = 0.8967014
+anchor_bottom = 0.0030864198
+offset_left = -532.0
+offset_bottom = 2140.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1338422018]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1833035492]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1956465165]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=155849863]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1923382776]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=550549991]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1918993720]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=392459435]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1318734309]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=1942304968]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=578749844]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1299718392]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=2135620658]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=454436978]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=880658673]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer" unique_id=1471538683]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer6" unique_id=1321462893]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer6" unique_id=1802346046]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer" unique_id=717227128]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer7" unique_id=417453326]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer7" unique_id=681794817]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer" unique_id=1627390694]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer8" unique_id=1364633695]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer8" unique_id=1744138253]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
