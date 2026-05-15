@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://du1a5n31v8s74"]
+
+[ext_resource type="Script" uid="uid://n75haeh43ada" path="res://scenes/cutscene_6.gd" id="1_0kdck"]
+[ext_resource type="Texture2D" uid="uid://d2xb2nfxuynb3" path="res://assets/Fundos/ruaPixels.png" id="4_0kdck"]
+[ext_resource type="Texture2D" uid="uid://du5t6bkshandy" path="res://assets/antigosSprites/armani.png" id="4_7me6c"]
+[ext_resource type="Texture2D" uid="uid://bvb52bwatsd8n" path="res://assets/antigosSprites/fatima.png" id="5_ockxf"]
+[ext_resource type="AudioStream" uid="uid://ccapj31t0vgrs" path="res://assets/TesteSom/Sossego.mp3" id="5_tu8p8"]
+[ext_resource type="Texture2D" uid="uid://ctd3fxxqnkonk" path="res://assets/antigosSprites/sueli.png" id="6_7me6c"]
+[ext_resource type="AudioStream" uid="uid://cusp6o78yqljb" path="res://assets/TesteSom/Tapa.mp3" id="7_ockxf"]
+[ext_resource type="AudioStream" uid="uid://bwudcxyd032g1" path="res://assets/TesteSom/AmadaAmante.mp3" id="8_7me6c"]
+
+[sub_resource type="Animation" id="Animation_7me6c"]
+resource_name = "FatimaAtaca"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fatima:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 10), Vector2(800, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_0kdck"]
+resource_name = "FatimaESueliEntrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fatima:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.8333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-90, 10), Vector2(400, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sueli:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.16666667, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-200, 10), Vector2(250, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_cvpnt"]
+resource_name = "LucileneEntrando"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.06666667, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-167, 417), Vector2(100, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_wjmbi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-167, 417)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fatima:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-90, 10)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sueli:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-200, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5t3t7"]
+_data = {
+&"FatimaAtaca": SubResource("Animation_7me6c"),
+&"FatimaESueliEntrada": SubResource("Animation_0kdck"),
+&"LucileneEntrando": SubResource("Animation_cvpnt"),
+&"RESET": SubResource("Animation_wjmbi")
+}
+
+[node name="Cutscene6" type="Node2D" unique_id=1535298250]
+position = Vector2(-167, 417)
+script = ExtResource("1_0kdck")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=350164062]
+libraries/ = SubResource("AnimationLibrary_5t3t7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=276888922]
+stream = ExtResource("5_tu8p8")
+autoplay = true
+
+[node name="RuaPixels" type="Sprite2D" parent="." unique_id=651717249]
+position = Vector2(716.19995, -58.8667)
+scale = Vector2(0.903125, 1)
+texture = ExtResource("4_0kdck")
+
+[node name="Fatima" type="Sprite2D" parent="." unique_id=2006217410]
+position = Vector2(-90, 10)
+scale = Vector2(2, 2)
+texture = ExtResource("5_ockxf")
+
+[node name="Sueli" type="Sprite2D" parent="." unique_id=270214582]
+position = Vector2(-200, 10)
+scale = Vector2(2, 2)
+texture = ExtResource("6_7me6c")
+
+[node name="Armani" type="Sprite2D" parent="." unique_id=1814054665]
+position = Vector2(1000, 10)
+scale = Vector2(2, 2)
+texture = ExtResource("4_7me6c")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=2047940889]
+stream = ExtResource("7_ockxf")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=1491608324]
+stream = ExtResource("8_7me6c")

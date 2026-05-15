@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://pa68w66qiy4"
+path="res://.godot/imported/DjalmaeChalitaReidoBeirute.dialogue-abd646838ea742d206c05581bb4cdae4.tres"
+
+[deps]
+
+source_file="res://Dialogo/DjalmaeChalitaReidoBeirute.dialogue"
+dest_files=["res://.godot/imported/DjalmaeChalitaReidoBeirute.dialogue-abd646838ea742d206c05581bb4cdae4.tres"]
+
+[params]
+
+defaults=true

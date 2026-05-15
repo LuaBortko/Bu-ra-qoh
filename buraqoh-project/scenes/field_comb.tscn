@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b2tyolx3rs81"]
+
+[ext_resource type="Script" uid="uid://byxas8iqw0vgm" path="res://field_comb.gd" id="1_khvwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crh71"]
+size = Vector2(210, 148)
+
+[node name="field_comb" type="MarginContainer" unique_id=877406445]
+custom_minimum_size = Vector2(400, 100)
+anchors_preset = -1
+anchor_right = 0.364583
+anchor_bottom = 0.228395
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_khvwx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=185306865]
+layout_mode = 2
+color = Color(0.7211114, 0.25862625, 0.21967408, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1517124584]
+modulate = Color(1, 1, 1, 0.278431)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1101307351]
+layout_mode = 2
+
+[node name="CardsHolder" type="HBoxContainer" parent="." unique_id=1384825890]
+layout_mode = 2
+alignment = 1
+
+[node name="CardDropAreaRight" type="Area2D" parent="." unique_id=912074235]
+position = Vector2(210, 0)
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropAreaRight" unique_id=805285723]
+position = Vector2(106, 74)
+shape = SubResource("RectangleShape2D_crh71")
+
+[node name="CardDropAreaLeft" type="Area2D" parent="." unique_id=1640291125]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropAreaLeft" unique_id=1199338860]
+position = Vector2(106, 74)
+shape = SubResource("RectangleShape2D_crh71")
+
+[node name="Overlay" type="Control" parent="." unique_id=778799177]
+layout_mode = 2
+
+[node name="DeleteButton" type="Button" parent="Overlay" unique_id=1676972744]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -18.0
+offset_bottom = 31.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+text = "X"

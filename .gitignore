@@ -1,0 +1,11 @@
+# Godot export files
+*.exe
+*.x86_64
+*.pck
+*.zip
+*.apk
+*.ipa
+
+# Godot cache
+.import/
+.export/

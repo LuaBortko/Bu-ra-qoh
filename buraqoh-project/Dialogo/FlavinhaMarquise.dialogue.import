@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cwifittotg65c"
+path="res://.godot/imported/FlavinhaMarquise.dialogue-d3b53b1db0b5b0e5cf12159d37f78906.tres"
+
+[deps]
+
+source_file="res://Dialogo/FlavinhaMarquise.dialogue"
+dest_files=["res://.godot/imported/FlavinhaMarquise.dialogue-d3b53b1db0b5b0e5cf12159d37f78906.tres"]
+
+[params]
+
+defaults=true

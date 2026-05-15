@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://41jpq0ysmk55"]
+
+[ext_resource type="Script" path="res://scenes/cutscene_pre_tutorial.gd" id="1_sp1tc"]
+[ext_resource type="Texture2D" uid="uid://ctxsu8d7o0ga3" path="res://assets/Fundos/consultorioPixels.png" id="1_v7t2i"]
+[ext_resource type="Texture2D" uid="uid://vymgek6kxku1" path="res://assets/antigosSprites/pc.png" id="2_f1un3"]
+[ext_resource type="Texture2D" uid="uid://dko7bhkvctnvp" path="res://assets/antigosSprites/lucilene.png" id="3_sp1tc"]
+[ext_resource type="AudioStream" uid="uid://15niqlx13kku" path="res://assets/TesteSom/Principe Encantado - Banda Calypso (Karaokê) - Calypso karaokes (youtube).mp3" id="5_gsn0x"]
+
+[sub_resource type="Animation" id="Animation_gsn0x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1264, 414)]
+}
+
+[sub_resource type="Animation" id="Animation_xin6m"]
+resource_name = "TesteEntrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1264, 414), Vector2(939.0001, 411)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gamk"]
+_data = {
+&"RESET": SubResource("Animation_gsn0x"),
+&"TesteEntrada": SubResource("Animation_xin6m")
+}
+
+[node name="CutscenePreTutorial" type="Node2D" unique_id=1674822700]
+script = ExtResource("1_sp1tc")
+
+[node name="ConsultorioPixels" type="Sprite2D" parent="." unique_id=335680158]
+position = Vector2(658, 378)
+scale = Vector2(0.95857567, 0.83984375)
+texture = ExtResource("1_v7t2i")
+
+[node name="Pc" type="Sprite2D" parent="." unique_id=1492307003]
+position = Vector2(260, 425)
+scale = Vector2(2, 2)
+texture = ExtResource("2_f1un3")
+
+[node name="Lucilene" type="Sprite2D" parent="." unique_id=1295577933]
+position = Vector2(1264, 414)
+scale = Vector2(1.931, 2)
+texture = ExtResource("3_sp1tc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=351527454]
+stream = ExtResource("5_gsn0x")
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1334133978]
+root_node = NodePath("../Lucilene")
+libraries/ = SubResource("AnimationLibrary_1gamk")

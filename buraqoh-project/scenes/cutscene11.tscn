@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dllgnt6g1jhua"]
+
+[ext_resource type="Texture2D" uid="uid://clapwdwmxx4mm" path="res://assets/Fundos/MarquisePixel.jpg" id="1_37g0j"]
+[ext_resource type="Script" uid="uid://0ljk0u33l2oq" path="res://scenes/cutscene_11.gd" id="1_q6owe"]
+[ext_resource type="Texture2D" uid="uid://cl251bpiafw1j" path="res://assets/antigosSprites/flavinha.png" id="2_8smn6"]
+[ext_resource type="Texture2D" uid="uid://w4aij2nsqn1j" path="res://assets/Fundos/EleganceQueenPixelClearBackground.png" id="3_q6owe"]
+
+[node name="Cutscene11" type="Node2D" unique_id=918783152]
+script = ExtResource("1_q6owe")
+
+[node name="MarquisePixel" type="Sprite2D" parent="." unique_id=1746753543]
+position = Vector2(577, 438.5)
+scale = Vector2(1.1230469, 0.83691406)
+texture = ExtResource("1_37g0j")
+
+[node name="Flavinha" type="Sprite2D" parent="." unique_id=1692117795]
+position = Vector2(891, 449)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_8smn6")
+
+[node name="EleganceQueenPixelClearBackground" type="Sprite2D" parent="." unique_id=361752969]
+position = Vector2(742.00006, 363.00003)
+scale = Vector2(0.29471555, 0.28703704)
+texture = ExtResource("3_q6owe")

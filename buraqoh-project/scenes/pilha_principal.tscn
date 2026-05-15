@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ptop2hdbik6r"]
+
+[ext_resource type="Script" uid="uid://c00m501008ikr" path="res://scripts/pilha_principal.gd" id="1_3yc4r"]
+
+[node name="Pilha_Principal" type="TextureButton" unique_id=1634702250]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3yc4r")
+
+[node name="CountLabel" type="Label" parent="." unique_id=655179286]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)

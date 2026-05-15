@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://3trgkf0u68ry"]
+
+[ext_resource type="Script" uid="uid://b7lbjwi2m5kf4" path="res://example/card/card.gd" id="1_gelhr"]
+[ext_resource type="Script" uid="uid://bj3q6dqkcullb" path="res://example/card/state_machine/card_state_machine.gd" id="2_vqdgh"]
+[ext_resource type="Script" uid="uid://cfdykjb880jwm" path="res://example/card/state_machine/states/idle_card_state.gd" id="3_bx54l"]
+[ext_resource type="Script" uid="uid://dcc1rawvlovhh" path="res://example/card/state_machine/states/clicked_card_state.gd" id="4_2bop5"]
+[ext_resource type="Script" uid="uid://c0xatu7l01kcn" path="res://example/card/state_machine/states/drag_card_state.gd" id="5_f7w2d"]
+[ext_resource type="Script" uid="uid://jvlqlkytnder" path="res://example/card/state_machine/states/release_card_state.gd" id="6_r0y7t"]
+[ext_resource type="Script" uid="uid://onakum3fdh6a" path="res://example/card/state_machine/states/hover_card_state.gd" id="7_xjssr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwet6"]
+size = Vector2(100, 150)
+
+[node name="Card" type="Control" unique_id=827979112]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_gelhr")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1722927147]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.3
+offset_top = -3.6
+offset_right = -2.300003
+offset_bottom = -3.600006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.05, 1.05)
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="NameLabel" type="Label" parent="." unique_id=1822662536]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 26.5
+offset_right = 73.5
+offset_bottom = 23.0
+text = "Name"
+
+[node name="Label" type="Label" parent="." unique_id=1763529227]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "State"
+
+[node name="CardStateMachine" type="Node" parent="." unique_id=1357306214 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_vqdgh")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="CardStateMachine" unique_id=961250448 node_paths=PackedStringArray("card")]
+script = ExtResource("3_bx54l")
+card = NodePath("../..")
+
+[node name="Click" type="Node" parent="CardStateMachine" unique_id=1330747109 node_paths=PackedStringArray("card")]
+script = ExtResource("4_2bop5")
+card = NodePath("../..")
+
+[node name="Drag" type="Node" parent="CardStateMachine" unique_id=1711892099 node_paths=PackedStringArray("card")]
+script = ExtResource("5_f7w2d")
+card = NodePath("../..")
+
+[node name="Release" type="Node" parent="CardStateMachine" unique_id=1204348492 node_paths=PackedStringArray("card")]
+script = ExtResource("6_r0y7t")
+card = NodePath("../..")
+
+[node name="Hover" type="Node" parent="CardStateMachine" unique_id=123139596 node_paths=PackedStringArray("card")]
+script = ExtResource("7_xjssr")
+card = NodePath("../..")
+
+[node name="DropPointDetector" type="Area2D" parent="." unique_id=832860599]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector" unique_id=1381875354]
+position = Vector2(50, 75)
+shape = SubResource("RectangleShape2D_gwet6")
+
+[node name="CardsDetector" type="Area2D" parent="." unique_id=1049610913]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardsDetector" unique_id=2140374071]
+position = Vector2(50, 75)
+shape = SubResource("RectangleShape2D_gwet6")
+
+[node name="CardSprite" type="TextureRect" parent="." unique_id=1490912897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

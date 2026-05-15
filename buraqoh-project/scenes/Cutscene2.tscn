@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://tx26g53q6t4m"]
+
+[ext_resource type="Script" uid="uid://dwcxaqmu1vdmg" path="res://scenes/cutscene_2.gd" id="1_4h3f2"]
+[ext_resource type="Texture2D" uid="uid://cydvnleugkcro" path="res://assets/Fundos/BeiruteSemMarca.png" id="1_mgiu1"]
+[ext_resource type="Texture2D" uid="uid://bvb52bwatsd8n" path="res://assets/antigosSprites/fatima.png" id="2_pd5gk"]
+[ext_resource type="Texture2D" uid="uid://ctd3fxxqnkonk" path="res://assets/antigosSprites/sueli.png" id="3_4h3f2"]
+[ext_resource type="Texture2D" uid="uid://d2ujvb51yofo1" path="res://assets/antigosSprites/jurandir.png" id="4_wal0k"]
+[ext_resource type="AudioStream" uid="uid://cf7sbr0at4tji" path="res://assets/TesteSom/pertinhodeVoce.mp3" id="6_wal0k"]
+
+[sub_resource type="Animation" id="Animation_1pnw6"]
+resource_name = "Entrada_FatimaESueli"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sueli:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-300, 480), Vector2(90, 480)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fatima:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-43.5, 480), Vector2(220, 480)]
+}
+
+[sub_resource type="Animation" id="Animation_13lb2"]
+resource_name = "FatimaVaiAoAtaque"
+
+[sub_resource type="Animation" id="Animation_3ygr5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sueli:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(90, 480)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fatima:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-43.5, 480)]
+}
+
+[sub_resource type="Animation" id="Animation_wal0k"]
+resource_name = "SueliVaiProAtaque"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sueli:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(90, 480), Vector2(750, 480)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fatima:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(220, 480), Vector2(600, 480)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_13lb2"]
+_data = {
+&"Entrada_FatimaESueli": SubResource("Animation_1pnw6"),
+&"FatimaVaiAoAtaque": SubResource("Animation_13lb2"),
+&"RESET": SubResource("Animation_3ygr5"),
+&"SueliVaiProAtaque": SubResource("Animation_wal0k")
+}
+
+[node name="Cutscene2" type="Node2D" unique_id=2050067278]
+script = ExtResource("1_4h3f2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1443274890]
+libraries/ = SubResource("AnimationLibrary_13lb2")
+
+[node name="BeiruteSemMarca" type="Sprite2D" parent="." unique_id=1076783372]
+position = Vector2(577, 321)
+scale = Vector2(0.68421054, 0.6971307)
+texture = ExtResource("1_mgiu1")
+
+[node name="Fatima" type="Sprite2D" parent="." unique_id=1004823556]
+position = Vector2(-43.5, 480)
+scale = Vector2(2, 2)
+texture = ExtResource("2_pd5gk")
+
+[node name="Sueli" type="Sprite2D" parent="." unique_id=1647251448]
+position = Vector2(90, 480)
+scale = Vector2(2, 2)
+texture = ExtResource("3_4h3f2")
+
+[node name="Jurandir" type="Sprite2D" parent="." unique_id=1189282248]
+position = Vector2(974.5, 451)
+scale = Vector2(2, 2)
+texture = ExtResource("4_wal0k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1777624692]
+stream = ExtResource("6_wal0k")
+autoplay = true

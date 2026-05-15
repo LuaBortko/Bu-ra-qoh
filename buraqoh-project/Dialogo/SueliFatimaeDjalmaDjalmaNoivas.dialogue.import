@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://beh61kxjtocwr"
+path="res://.godot/imported/SueliFatimaeDjalmaDjalmaNoivas.dialogue-46a1eec610af04878702b554d9651e8e.tres"
+
+[deps]
+
+source_file="res://Dialogo/SueliFatimaeDjalmaDjalmaNoivas.dialogue"
+dest_files=["res://.godot/imported/SueliFatimaeDjalmaDjalmaNoivas.dialogue-46a1eec610af04878702b554d9651e8e.tres"]
+
+[params]
+
+defaults=true

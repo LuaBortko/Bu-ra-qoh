@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bqnlr0e1omht3"]
+
+[ext_resource type="Script" uid="uid://b3v5wbgknraxx" path="res://scenes/cutscene_4.gd" id="1_cjhia"]
+[ext_resource type="Texture2D" uid="uid://5hhtte7eoj0o" path="res://assets/Fundos/ImportadoraPixels.png" id="2_tqwua"]
+[ext_resource type="Texture2D" uid="uid://dko7bhkvctnvp" path="res://assets/antigosSprites/lucilene.png" id="3_dlwe7"]
+[ext_resource type="Texture2D" uid="uid://du5t6bkshandy" path="res://assets/antigosSprites/armani.png" id="4_4d583"]
+[ext_resource type="AudioStream" uid="uid://ccapj31t0vgrs" path="res://assets/TesteSom/Sossego.mp3" id="5_hy3nt"]
+
+[sub_resource type="Animation" id="Animation_cvpnt"]
+resource_name = "LucileneEntrando"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.06666667, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-167, 417), Vector2(100, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_wjmbi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-167, 417)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5t3t7"]
+_data = {
+&"LucileneEntrando": SubResource("Animation_cvpnt"),
+&"RESET": SubResource("Animation_wjmbi")
+}
+
+[node name="Cutscene4" type="Node2D" unique_id=1535298250]
+script = ExtResource("1_cjhia")
+
+[node name="ImportadoraPixels" type="Sprite2D" parent="." unique_id=696992688]
+position = Vector2(571.5, 349)
+scale = Vector2(0.86383927, 1)
+texture = ExtResource("2_tqwua")
+
+[node name="Lucilene" type="Sprite2D" parent="." unique_id=1693133665]
+position = Vector2(-167, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dlwe7")
+
+[node name="Armani" type="Sprite2D" parent="." unique_id=2060727593]
+position = Vector2(1061, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_4d583")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=350164062]
+root_node = NodePath("../Lucilene")
+libraries/ = SubResource("AnimationLibrary_5t3t7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=276888922]
+stream = ExtResource("5_hy3nt")
+autoplay = true

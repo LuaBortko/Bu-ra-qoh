@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://boxc7bty1b84r"]
+
+[ext_resource type="Script" uid="uid://ceslovj0x124b" path="res://scenes/cutscene_9.gd" id="1_qh6l2"]
+[ext_resource type="Texture2D" uid="uid://dc2bonr5r58lb" path="res://assets/Fundos/DjalmaNoivasPixel.jpg" id="2_16thh"]
+[ext_resource type="Texture2D" uid="uid://bvb52bwatsd8n" path="res://assets/antigosSprites/fatima.png" id="3_je1fp"]
+[ext_resource type="Texture2D" uid="uid://ctd3fxxqnkonk" path="res://assets/antigosSprites/sueli.png" id="4_spx6d"]
+[ext_resource type="Texture2D" uid="uid://bmkxp00g41rxx" path="res://assets/antigosSprites/djalma.png" id="5_rynw0"]
+
+[sub_resource type="Animation" id="Animation_enmah"]
+resource_name = "DjalmaEntrando"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Djalma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1263, 430), Vector2(1100, 430), Vector2(1000, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_ftm6x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Djalma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1263, 430)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aw15m"]
+_data = {
+&"DjalmaEntrando": SubResource("Animation_enmah"),
+&"RESET": SubResource("Animation_ftm6x")
+}
+
+[node name="Cutscene9" type="Node2D" unique_id=669574064]
+script = ExtResource("1_qh6l2")
+
+[node name="DjalmaNoivasPixel" type="Sprite2D" parent="." unique_id=448396663]
+position = Vector2(577.5, 401)
+scale = Vector2(1.1259766, 0.7753906)
+texture = ExtResource("2_16thh")
+
+[node name="Fatima" type="Sprite2D" parent="." unique_id=1220216607]
+position = Vector2(90, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("3_je1fp")
+
+[node name="Sueli" type="Sprite2D" parent="." unique_id=1345597670]
+position = Vector2(248, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_spx6d")
+
+[node name="Djalma" type="Sprite2D" parent="." unique_id=1505892615]
+position = Vector2(1263, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("5_rynw0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187420670]
+libraries/ = SubResource("AnimationLibrary_aw15m")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d1x8x6r08ecrr"]
+
+[ext_resource type="Script" uid="uid://dr51mcua6ij2k" path="res://scripts/special_effect_indicator.gd" id="1_83t11"]
+
+[node name="special_effect_indicator" type="PanelContainer" unique_id=685581204]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_83t11")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2115684733]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1123443585]
+layout_mode = 2
+
+[node name="DescLabel" type="Label" parent="VBoxContainer" unique_id=130439590]
+layout_mode = 2

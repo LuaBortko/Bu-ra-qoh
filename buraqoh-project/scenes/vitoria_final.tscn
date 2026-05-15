@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b65sxl3ukcbub"]
+
+[ext_resource type="Script" uid="uid://dnbjjxujjqyn5" path="res://scripts/vitoria_final.gd" id="1_fncjo"]
+[ext_resource type="Texture2D" uid="uid://w4aij2nsqn1j" path="res://assets/Fundos/EleganceQueenPixelClearBackground.png" id="2_voxn5"]
+
+[node name="vitoria_final" type="Control" unique_id=1932035868]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fncjo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=543394651]
+z_index = 1
+position = Vector2(1073, 316)
+rotation = 0.19190317
+scale = Vector2(0.5060975, 0.40787038)
+texture = ExtResource("2_voxn5")

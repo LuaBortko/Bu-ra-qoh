@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://mjhjr2y2wk0i"]
+
+[ext_resource type="Script" uid="uid://7g04kx6qxxmy" path="res://scripts/pag_personagens.gd" id="1_q38wm"]
+[ext_resource type="Texture2D" uid="uid://bvb52bwatsd8n" path="res://assets/antigosSprites/fatima.png" id="1_v4bip"]
+[ext_resource type="Texture2D" uid="uid://ctd3fxxqnkonk" path="res://assets/antigosSprites/sueli.png" id="2_x70fr"]
+[ext_resource type="Texture2D" uid="uid://du5t6bkshandy" path="res://assets/antigosSprites/armani.png" id="3_3cu3l"]
+[ext_resource type="Texture2D" uid="uid://dk8p5lu0dj38p" path="res://assets/antigosSprites/jorge.png" id="4_q38wm"]
+[ext_resource type="Texture2D" uid="uid://vymgek6kxku1" path="res://assets/antigosSprites/pc.png" id="5_ihva7"]
+[ext_resource type="Texture2D" uid="uid://dko7bhkvctnvp" path="res://assets/antigosSprites/lucilene.png" id="6_u7sal"]
+[ext_resource type="Texture2D" uid="uid://blkfbnp154vw3" path="res://assets/antigosSprites/tijolo.png" id="7_w0t2h"]
+[ext_resource type="Texture2D" uid="uid://bmkxp00g41rxx" path="res://assets/antigosSprites/djalma.png" id="8_yt55k"]
+[ext_resource type="Texture2D" uid="uid://c5gtlqaydekiv" path="res://assets/antigosSprites/tavares.png" id="9_g5fqs"]
+[ext_resource type="Texture2D" uid="uid://d2ujvb51yofo1" path="res://assets/antigosSprites/jurandir.png" id="10_llson"]
+[ext_resource type="Texture2D" uid="uid://brlakpkpn5ajq" path="res://assets/antigosSprites/bia.png" id="11_oe672"]
+[ext_resource type="Texture2D" uid="uid://14eerwq5bpb2" path="res://assets/antigosSprites/chalita.png" id="12_f54pv"]
+[ext_resource type="Texture2D" uid="uid://cl251bpiafw1j" path="res://assets/antigosSprites/flavinha.png" id="13_uyucs"]
+[ext_resource type="Texture2D" uid="uid://fpog6p88pi66" path="res://assets/antigosSprites/santo.png" id="14_3ti7y"]
+[ext_resource type="FontFile" uid="uid://dy65p2ypnuo8e" path="res://assets/fontes/Jersey_10/Jersey10-Regular.ttf" id="15_ksehf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q38wm"]
+bg_color = Color(0.41568628, 0.21176471, 0.05882353, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.23420635, 0.062078148, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 16
+anti_aliasing = false
+
+[node name="Personagens" type="Control" unique_id=616912128]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q38wm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ColorRect" parent="." unique_id=1997990269]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5370987, 0.4340616, 0.38206664, 1)
+metadata/_edit_lock_ = true
+
+[node name="Botoes_Personagens" type="VBoxContainer" parent="." unique_id=1104564830]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.99997
+offset_top = -281.0
+offset_right = 400.0
+offset_bottom = 1719.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Botoes_Personagens" unique_id=1338422018]
+layout_mode = 2
+
+[node name="fatima" type="Button" parent="Botoes_Personagens/HBoxContainer" unique_id=1833035492 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("1_v4bip")
+
+[node name="sueli" type="Button" parent="Botoes_Personagens/HBoxContainer" unique_id=1956465165 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("2_x70fr")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Botoes_Personagens" unique_id=155849863]
+layout_mode = 2
+
+[node name="armane" type="Button" parent="Botoes_Personagens/HBoxContainer2" unique_id=1923382776 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("3_3cu3l")
+
+[node name="jorge" type="Button" parent="Botoes_Personagens/HBoxContainer2" unique_id=550549991 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("4_q38wm")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Botoes_Personagens" unique_id=1918993720]
+layout_mode = 2
+
+[node name="pc" type="Button" parent="Botoes_Personagens/HBoxContainer3" unique_id=392459435 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("5_ihva7")
+
+[node name="lucilene" type="Button" parent="Botoes_Personagens/HBoxContainer3" unique_id=1318734309 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("6_u7sal")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Botoes_Personagens" unique_id=1942304968]
+layout_mode = 2
+
+[node name="tijolo" type="Button" parent="Botoes_Personagens/HBoxContainer4" unique_id=578749844 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("7_w0t2h")
+
+[node name="djalma" type="Button" parent="Botoes_Personagens/HBoxContainer4" unique_id=1299718392 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("8_yt55k")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Botoes_Personagens" unique_id=2135620658]
+layout_mode = 2
+
+[node name="tavares" type="Button" parent="Botoes_Personagens/HBoxContainer5" unique_id=454436978 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("9_g5fqs")
+
+[node name="jurandir" type="Button" parent="Botoes_Personagens/HBoxContainer5" unique_id=880658673 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("10_llson")
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Botoes_Personagens" unique_id=1471538683]
+layout_mode = 2
+
+[node name="bia" type="Button" parent="Botoes_Personagens/HBoxContainer6" unique_id=1321462893 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("11_oe672")
+
+[node name="chalita" type="Button" parent="Botoes_Personagens/HBoxContainer6" unique_id=1802346046 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("12_f54pv")
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Botoes_Personagens" unique_id=717227128]
+layout_mode = 2
+
+[node name="flavinha" type="Button" parent="Botoes_Personagens/HBoxContainer7" unique_id=417453326 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("13_uyucs")
+
+[node name="santo" type="Button" parent="Botoes_Personagens/HBoxContainer7" unique_id=681794817 groups=["buttons"]]
+layout_mode = 2
+icon = ExtResource("14_3ti7y")
+
+[node name="Destaque" type="Sprite2D" parent="." unique_id=1041653358]
+position = Vector2(251.25, 319.00003)
+scale = Vector2(1.9394532, 1.8945313)
+texture = ExtResource("1_v4bip")
+
+[node name="Confirmar" type="Button" parent="." unique_id=1217076659]
+z_index = 1
+layout_mode = 0
+offset_left = 697.0
+offset_top = 513.0
+offset_right = 1094.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0.10748, 0.107479624, 0.107479714, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.52383417, 0, 0.08291609, 1)
+theme_override_fonts/font = ExtResource("15_ksehf")
+theme_override_font_sizes/font_size = 60
+text = "Confirmar Seleção"
+flat = true
+
+[node name="Bloco_Descricao" type="Panel" parent="." unique_id=1075374050]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 79.0
+offset_right = 1091.0
+offset_bottom = 479.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q38wm")
+
+[node name="Texto" type="VBoxContainer" parent="Bloco_Descricao" unique_id=102263790]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -149.0
+offset_right = 170.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Classe" type="Label" parent="Bloco_Descricao/Texto" unique_id=1828662037]
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="Descricao" type="Label" parent="Bloco_Descricao/Texto" unique_id=1009107738]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 2

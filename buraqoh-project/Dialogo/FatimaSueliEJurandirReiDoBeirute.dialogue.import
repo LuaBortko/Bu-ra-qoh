@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ckr066jh8ga0d"
+path="res://.godot/imported/FatimaSueliEJurandirReiDoBeirute.dialogue-dd596e8ac3b97ad5420eab425843e57e.tres"
+
+[deps]
+
+source_file="res://Dialogo/FatimaSueliEJurandirReiDoBeirute.dialogue"
+dest_files=["res://.godot/imported/FatimaSueliEJurandirReiDoBeirute.dialogue-dd596e8ac3b97ad5420eab425843e57e.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d3v84kvg68vl6"
+path="res://.godot/imported/TavaresJorgeLaConga.dialogue-d32088362eb4eb95212c4c49c3fc4efe.tres"
+
+[deps]
+
+source_file="res://Dialogo/TavaresJorgeLaConga.dialogue"
+dest_files=["res://.godot/imported/TavaresJorgeLaConga.dialogue-d32088362eb4eb95212c4c49c3fc4efe.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bgdqtp3vliae4"]
+
+[ext_resource type="Script" uid="uid://cwwg7ysjoijk8" path="res://scripts/modo_selecao.gd" id="1_1a4nd"]
+[ext_resource type="FontFile" uid="uid://dy65p2ypnuo8e" path="res://assets/fontes/Jersey_10/Jersey10-Regular.ttf" id="1_ixwj3"]
+
+[node name="Modo_selecao" type="Control" unique_id=401388250]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1a4nd")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1372441122]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5370987, 0.4340616, 0.38206664, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1286224455]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Historia" type="Button" parent="VBoxContainer" unique_id=744824992]
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.10748, 0.107479624, 0.107479714, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.52383417, 0, 0.08291609, 1)
+theme_override_fonts/font = ExtResource("1_ixwj3")
+theme_override_font_sizes/font_size = 60
+text = "História"
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1426643328]
+layout_mode = 2
+
+[node name="Online" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=85130635]
+visible = false
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.10748, 0.107479624, 0.107479714, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.52383417, 0, 0.08291609, 1)
+theme_override_fonts/font = ExtResource("1_ixwj3")
+theme_override_font_sizes/font_size = 60
+text = "PvP Online"
+flat = true
+
+[node name="Local" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=505541361]
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.10748, 0.107479624, 0.107479714, 1)
+theme_override_colors/font_pressed_color = Color(0.92156863, 0, 0.18039216, 1)
+theme_override_colors/font_hover_color = Color(0.52383417, 0, 0.08291609, 1)
+theme_override_fonts/font = ExtResource("1_ixwj3")
+theme_override_font_sizes/font_size = 60
+text = "PvP Local"
+flat = true

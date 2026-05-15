@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8jx20rpt135m"
+path="res://.godot/imported/FatimaSueliEArmaneRua.dialogue-bd6c6186b14ed05de316004de265e81e.tres"
+
+[deps]
+
+source_file="res://Dialogo/FatimaSueliEArmaneRua.dialogue"
+dest_files=["res://.godot/imported/FatimaSueliEArmaneRua.dialogue-bd6c6186b14ed05de316004de265e81e.tres"]
+
+[params]
+
+defaults=true

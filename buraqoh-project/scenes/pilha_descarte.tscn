@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://v038nu20rojg"]
+
+[ext_resource type="Script" uid="uid://dduw12pqmt0eg" path="res://scripts/pilha_descarte.gd" id="1_xh144"]
+
+[node name="pilha_descarte" type="TextureButton" unique_id=646259409]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xh144")
+
+[node name="CardSprite" type="TextureRect" parent="." unique_id=2089688049]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

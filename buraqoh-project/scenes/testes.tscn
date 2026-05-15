@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://e6ckuhfl6g7j"]
+
+[ext_resource type="PackedScene" uid="uid://biim2lxri0akl" path="res://example/field/field.tscn" id="1_psess"]
+[ext_resource type="Script" uid="uid://u65sr4banduf" path="res://scripts/testes.gd" id="1_ttaho"]
+[ext_resource type="Script" uid="uid://d3gs2ex3xnu1x" path="res://scripts/deck.gd" id="2_ttaho"]
+[ext_resource type="PackedScene" uid="uid://3trgkf0u68ry" path="res://example/card/card.tscn" id="3_sohe2"]
+[ext_resource type="PackedScene" uid="uid://cb64gbnuoq3sa" path="res://scenes/field_mesa.tscn" id="4_pvpph"]
+[ext_resource type="PackedScene" uid="uid://b2tyolx3rs81" path="res://scenes/field_comb.tscn" id="5_382mk"]
+
+[node name="Testes" type="Control" unique_id=2095618809 node_paths=PackedStringArray("deck")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ttaho")
+deck = NodePath("CanvasLayer/Deck")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1418359089 groups=["fields"]]
+
+[node name="Mão" parent="CanvasLayer" unique_id=1991924459 instance=ExtResource("1_psess")]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.5
+offset_top = -150.0
+offset_right = 210.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Deck" type="Node2D" parent="CanvasLayer" unique_id=1006774272 node_paths=PackedStringArray("player_hand")]
+script = ExtResource("2_ttaho")
+card_scene = ExtResource("3_sohe2")
+player_hand = NodePath("../Mão")
+
+[node name="field_mesa" parent="CanvasLayer" unique_id=1005513319 instance=ExtResource("4_pvpph")]
+offset_left = 138.0
+offset_top = 79.0
+offset_right = 138.0
+offset_bottom = 79.0
+scale = Vector2(0.8, 0.6)
+group_field_scene = ExtResource("5_382mk")
+metadata/_edit_use_anchors_ = true

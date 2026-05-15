@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://b26w3qtdi8hdg"]
+
+[ext_resource type="Texture2D" uid="uid://vnmcg6qp2f8n" path="res://assets/fundo_jogo.png" id="1_8ehb7"]
+[ext_resource type="Script" uid="uid://y75aab30a4q0" path="res://scripts/mesa.gd" id="1_xl6ws"]
+[ext_resource type="PackedScene" uid="uid://biim2lxri0akl" path="res://example/field/field.tscn" id="2_bru42"]
+[ext_resource type="PackedScene" uid="uid://3trgkf0u68ry" path="res://example/card/card.tscn" id="3_12636"]
+[ext_resource type="Script" uid="uid://d3gs2ex3xnu1x" path="res://scripts/deck.gd" id="4_bru42"]
+[ext_resource type="PackedScene" uid="uid://ptop2hdbik6r" path="res://scenes/pilha_principal.tscn" id="5_12636"]
+[ext_resource type="Texture2D" uid="uid://dtpt3hsfynchq" path="res://assets/card_back.png" id="6_u1ain"]
+[ext_resource type="PackedScene" uid="uid://cb64gbnuoq3sa" path="res://scenes/field_mesa.tscn" id="7_aj2bx"]
+[ext_resource type="PackedScene" uid="uid://v038nu20rojg" path="res://scenes/pilha_descarte.tscn" id="8_hcsg2"]
+[ext_resource type="PackedScene" uid="uid://ccgm8g3u87jpg" path="res://scenes/turn_ui.tscn" id="11_3bh14"]
+[ext_resource type="PackedScene" uid="uid://d1x8x6r08ecrr" path="res://scenes/special_effect_indicator.tscn" id="11_xl6ws"]
+[ext_resource type="Script" uid="uid://dn7n3ibmsc4nl" path="res://scripts/ai_player.gd" id="12_hcsg2"]
+[ext_resource type="AudioStream" uid="uid://cnvc1w1733mf7" path="res://assets/TesteSom/Copacabana.mp3" id="13_3bh14"]
+
+[node name="Mesa" type="Control" unique_id=1870299281]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xl6ws")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1328868005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8ehb7")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1555744316 groups=["fields"]]
+
+[node name="turn_ui" parent="CanvasLayer" unique_id=1646494026 instance=ExtResource("11_3bh14")]
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 2.0
+offset_bottom = -6.0
+
+[node name="MaoJ1" parent="CanvasLayer" unique_id=1276409627 instance=ExtResource("2_bru42")]
+anchor_left = 0.19878472
+anchor_top = 0.9885361
+anchor_right = 0.65302575
+anchor_bottom = 0.9885361
+offset_left = -3.0
+offset_top = -98.0
+offset_right = 418.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="MaoJ2" parent="CanvasLayer" unique_id=120522056 instance=ExtResource("2_bru42")]
+anchor_left = 0.19184028
+anchor_top = 1.0
+anchor_right = 0.6758431
+anchor_bottom = 1.0
+offset_left = -16.999985
+offset_top = -632.0
+offset_right = 404.0
+offset_bottom = -482.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="Deck" type="Node2D" parent="CanvasLayer" unique_id=33591857 node_paths=PackedStringArray("player_hand")]
+script = ExtResource("4_bru42")
+card_scene = ExtResource("3_12636")
+player_hand = NodePath("../MaoJ1")
+
+[node name="Pilha_Principal" parent="CanvasLayer" unique_id=1634702250 node_paths=PackedStringArray("deck") instance=ExtResource("5_12636")]
+offset_left = 18.0
+offset_top = 504.0
+offset_right = 114.0
+offset_bottom = 632.0
+texture_normal = ExtResource("6_u1ain")
+texture_pressed = ExtResource("6_u1ain")
+texture_hover = ExtResource("6_u1ain")
+texture_disabled = ExtResource("6_u1ain")
+texture_focused = ExtResource("6_u1ain")
+stretch_mode = 0
+deck = NodePath("../Deck")
+
+[node name="pilha_descarte" parent="CanvasLayer" unique_id=646259409 instance=ExtResource("8_hcsg2")]
+offset_left = 20.0
+offset_top = 353.0
+offset_right = 60.0
+offset_bottom = 393.0
+
+[node name="field_mesa_j1" parent="CanvasLayer" unique_id=1005513319 instance=ExtResource("7_aj2bx")]
+offset_left = 203.0
+offset_top = 158.0
+offset_right = -545.25
+offset_bottom = -75.0
+scale = Vector2(0.8, 0.8)
+
+[node name="field_mesa_j2" parent="CanvasLayer" unique_id=1619258350 instance=ExtResource("7_aj2bx")]
+offset_left = 675.0
+offset_top = 157.0
+offset_right = -73.25
+offset_bottom = -76.0
+scale = Vector2(0.8, 0.8)
+owner_player = 1
+
+[node name="SpecialEffectIndicator" parent="CanvasLayer" unique_id=685581204 instance=ExtResource("11_xl6ws")]
+offset_left = 133.0
+offset_top = 211.0
+offset_right = 1077.0
+offset_bottom = 391.0
+size_flags_horizontal = 8
+
+[node name="AIPlayer" type="Node" parent="." unique_id=562859740]
+script = ExtResource("12_hcsg2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2031007562]
+stream = ExtResource("13_3bh14")
+volume_db = -12.635
+autoplay = true

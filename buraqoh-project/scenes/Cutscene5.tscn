@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dj1l24ai1lft2"]
+
+[ext_resource type="Script" uid="uid://c18o6doykp68f" path="res://scenes/cutscene_5.gd" id="1_po3tx"]
+[ext_resource type="AudioStream" uid="uid://v7mftbxumf0i" path="res://assets/TesteSom/MandrakeeOsCubanos.mp3" id="2_po3tx"]
+[ext_resource type="Texture2D" uid="uid://dk8p5lu0dj38p" path="res://assets/antigosSprites/jorge.png" id="4_oov2h"]
+[ext_resource type="Texture2D" uid="uid://b36th1rfol0ht" path="res://assets/Fundos/lacongapixels.png" id="5_po3tx"]
+[ext_resource type="Texture2D" uid="uid://c5gtlqaydekiv" path="res://assets/antigosSprites/tavares.png" id="5_qd1yt"]
+
+[sub_resource type="Animation" id="Animation_cvpnt"]
+resource_name = "LucileneEntrando"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.06666667, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-167, 417), Vector2(100, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_wjmbi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-167, 417)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5t3t7"]
+_data = {
+&"LucileneEntrando": SubResource("Animation_cvpnt"),
+&"RESET": SubResource("Animation_wjmbi")
+}
+
+[node name="Cutscene5" type="Node2D" unique_id=1535298250]
+script = ExtResource("1_po3tx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=350164062]
+root_node = NodePath("")
+libraries/ = SubResource("AnimationLibrary_5t3t7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=276888922]
+stream = ExtResource("2_po3tx")
+autoplay = true
+
+[node name="Lacongapixels" type="Sprite2D" parent="." unique_id=1336848791]
+position = Vector2(572, 345.5)
+scale = Vector2(1, 0.7645089)
+texture = ExtResource("5_po3tx")
+
+[node name="Jorge" type="Sprite2D" parent="." unique_id=748408659]
+position = Vector2(145, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_oov2h")
+
+[node name="Tavares" type="Sprite2D" parent="." unique_id=2102824320]
+position = Vector2(840, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("5_qd1yt")

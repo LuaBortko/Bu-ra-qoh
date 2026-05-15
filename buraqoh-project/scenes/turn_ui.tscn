@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ccgm8g3u87jpg"]
+
+[ext_resource type="Script" uid="uid://cc461b04cf0de" path="res://scripts/turn_ui.gd" id="1_w22if"]
+
+[node name="turn_ui" type="Control" unique_id=1646494026]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w22if")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2050105934]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=15401622]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=476357762]
+layout_mode = 2
+
+[node name="PhaseLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=603482402]
+layout_mode = 2
+
+[node name="ScoreJ1" type="Label" parent="PanelContainer/VBoxContainer" unique_id=559850562]
+layout_mode = 2
+
+[node name="ScoreJ2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=920039647]
+layout_mode = 2
+
+[node name="HandPtsJ1" type="Label" parent="PanelContainer/VBoxContainer" unique_id=955768839]
+layout_mode = 2
+
+[node name="HandPtsJ2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=686423462]
+layout_mode = 2
+
+[node name="BtnBuraco" type="Button" parent="PanelContainer/VBoxContainer" unique_id=33770356]
+layout_mode = 2
+
+[node name="BtnNovaRodada" type="Button" parent="PanelContainer/VBoxContainer" unique_id=936154828]
+layout_mode = 2
+
+[node name="BtnDescartar" type="Button" parent="." unique_id=270122498]
+layout_mode = 0
+offset_top = 190.0
+offset_right = 130.0
+offset_bottom = 221.0
+text = "Descartar Carta"

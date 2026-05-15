@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvlrtu1ps4eqc"
+path="res://.godot/imported/CutsceneTutorial.dialogue-08b87941c8f7dc1fdac3e8c81228c5a2.tres"
+
+[deps]
+
+source_file="res://Dialogo/CutsceneTutorial.dialogue"
+dest_files=["res://.godot/imported/CutsceneTutorial.dialogue-08b87941c8f7dc1fdac3e8c81228c5a2.tres"]
+
+[params]
+
+defaults=true

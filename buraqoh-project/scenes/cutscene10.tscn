@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bt7j3letx2k5k"]
+
+[ext_resource type="Script" uid="uid://byjigo0ob02ay" path="res://scenes/cutscene_10.gd" id="1_ryflc"]
+[ext_resource type="Texture2D" uid="uid://dc2bonr5r58lb" path="res://assets/Fundos/DjalmaNoivasPixel.jpg" id="2_75m07"]
+[ext_resource type="Texture2D" uid="uid://ctd3fxxqnkonk" path="res://assets/antigosSprites/sueli.png" id="3_v1x7t"]
+[ext_resource type="Texture2D" uid="uid://bvb52bwatsd8n" path="res://assets/antigosSprites/fatima.png" id="4_tkx13"]
+[ext_resource type="Texture2D" uid="uid://bmkxp00g41rxx" path="res://assets/antigosSprites/djalma.png" id="5_ra3wh"]
+
+[node name="Cutscene10" type="Node2D" unique_id=925714719]
+script = ExtResource("1_ryflc")
+
+[node name="DjalmaNoivasPixel" type="Sprite2D" parent="." unique_id=325062471]
+position = Vector2(588, 381.50003)
+scale = Vector2(1.1347656, 0.7431641)
+texture = ExtResource("2_75m07")
+
+[node name="Sueli" type="Sprite2D" parent="." unique_id=18014414]
+position = Vector2(265, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("3_v1x7t")
+
+[node name="Fatima" type="Sprite2D" parent="." unique_id=281764013]
+position = Vector2(403, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_tkx13")
+
+[node name="Djalma" type="Sprite2D" parent="." unique_id=216642925]
+position = Vector2(1046, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("5_ra3wh")

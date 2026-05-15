@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ditb8hybx2b7n"
+path="res://.godot/imported/ArmaneLucileneImportadora.dialogue-3c827bfde440dbc2b2bb34338f13fcc1.tres"
+
+[deps]
+
+source_file="res://Dialogo/ArmaneLucileneImportadora.dialogue"
+dest_files=["res://.godot/imported/ArmaneLucileneImportadora.dialogue-3c827bfde440dbc2b2bb34338f13fcc1.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dx015fjeahv6n"
+path="res://.godot/imported/TavaresDjalmaDjalmaNoivas.dialogue-e2b397ff3fc71d87f261dfd209e97f98.tres"
+
+[deps]
+
+source_file="res://Dialogo/TavaresDjalmaDjalmaNoivas.dialogue"
+dest_files=["res://.godot/imported/TavaresDjalmaDjalmaNoivas.dialogue-e2b397ff3fc71d87f261dfd209e97f98.tres"]
+
+[params]
+
+defaults=true

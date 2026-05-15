@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cb64gbnuoq3sa"]
+
+[ext_resource type="Script" uid="uid://dtrljbtooijq5" path="res://scripts/field_mesa.gd" id="1_g3i7v"]
+[ext_resource type="PackedScene" uid="uid://b2tyolx3rs81" path="res://scenes/field_comb.tscn" id="2_lux8l"]
+
+[node name="field_mesa" type="Control" unique_id=1005513319 groups=["table_field"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g3i7v")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2144906755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=907622202]
+layout_mode = 2
+
+[node name="field_comb" parent="ScrollContainer/GridContainer" unique_id=877406445 instance=ExtResource("2_lux8l")]
+layout_mode = 2
+
+[node name="field_comb2" parent="ScrollContainer/GridContainer" unique_id=574558581 instance=ExtResource("2_lux8l")]
+layout_mode = 2
+
+[node name="field_comb3" parent="ScrollContainer/GridContainer" unique_id=167625131 instance=ExtResource("2_lux8l")]
+layout_mode = 2
+
+[node name="field_comb4" parent="ScrollContainer/GridContainer" unique_id=1354244593 instance=ExtResource("2_lux8l")]
+layout_mode = 2
