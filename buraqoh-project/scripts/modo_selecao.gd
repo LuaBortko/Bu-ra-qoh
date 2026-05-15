@@ -5,6 +5,7 @@ extends Control
 
 func _ready() -> void:
 	btn_local.pressed.connect(func():
+		StoryManager.modo_historia = false
 		get_tree().change_scene_to_file("res://scenes/personagens.tscn")
 	)
 	btn_historia.pressed.connect(func():

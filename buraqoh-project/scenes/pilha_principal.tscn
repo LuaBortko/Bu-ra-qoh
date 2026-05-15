@@ -8,6 +8,7 @@ offset_bottom = 40.0
 script = ExtResource("1_3yc4r")
 
 [node name="CountLabel" type="Label" parent="." unique_id=655179286]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0

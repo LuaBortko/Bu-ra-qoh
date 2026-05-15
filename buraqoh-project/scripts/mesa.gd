@@ -488,6 +488,7 @@ func _abrir_pause() -> void:
 	btn_menu.process_mode = Node.PROCESS_MODE_ALWAYS
 	btn_menu.pressed.connect(func():
 		get_tree().paused = false
+		StoryManager.modo_historia = false 
 		GameManager.reset()
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	)
